@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     android:background="@color/black">
 
-    <!-- Здесь вы можете разместить ваш текст, иконку и другие элементы внутри элемента меню -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
