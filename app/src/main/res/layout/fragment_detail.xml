@@ -253,6 +253,7 @@
                         app:layout_constraintTop_toBottomOf="@id/btn_refill" />
 
                     <TextView
+                        android:layout_marginStart="10dp"
                         android:id="@+id/btn_more_ten"
                         android:layout_width="wrap_content"
                         android:layout_height="34dp"
@@ -502,13 +503,76 @@
                         app:layout_constraintTop_toTopOf="@id/til_sum" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_gaz"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="6dp"
+                    android:hint="Вид топлива"
+                    android:textColorHint="@color/primary_text_black"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@id/til_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/const_et">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:paddingStart="16dp"
+                        android:paddingTop="12dp"
+
+                        android:drawableRight="@drawable/arrow"
+                        android:paddingEnd="10dp"
+                        android:text="Бензин АИ-98"
+                        android:textColor="@color/secondary_text_light_gray"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_date"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="24dp"
+                    android:hint="Дата события"
+                    android:textColorHint="@color/primary_text_black"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/til_gaz"
+                    app:layout_constraintTop_toBottomOf="@id/const_et">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:paddingStart="16dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="10dp"
+                        android:text=" "
+                        android:drawableStart="@drawable/calendar"
+                        android:drawableEnd="@drawable/arrow"
+                        android:textColor="@color/secondary_text_light_gray"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
                 <ImageView
                     android:id="@+id/img_line"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:src="@drawable/line_"
-                    app:layout_constraintTop_toBottomOf="@id/const_et" />
+                    app:layout_constraintTop_toBottomOf="@id/til_gaz" />
 
                 <TextView
                     android:id="@+id/tv_add_comment"
