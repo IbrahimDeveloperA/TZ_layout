@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item0"
+        android:color="@color/primary_text_black"
+        android:icon="@drawable/car_compact"
+        android:title="car" />
+
+    <item
+        android:id="@+id/item1"
+        android:color="@color/primary_text_black"
+        android:icon="@drawable/resourse"
+        android:title="mm" />
+
+    <item
+        android:id="@+id/item2"
+        android:background="@color/primary_text_black"
+        android:checked="true"
+        android:color="@color/primary_text_black"
+        android:icon="@drawable/home"
+        android:title="Главная" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:color="@color/primary_text_black"
+        android:icon="@drawable/settings"
+        android:title="Настройки" />
+
+    <item
+        android:id="@+id/muneFragment"
+        android:color="@color/primary_text_black"
+        android:icon="@drawable/mune"
+        android:title="Меню" />
+
+</menu>

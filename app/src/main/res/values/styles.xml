@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseButton" parent="Widget.AppCompat.TextView">
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="fontFamily">@font/ff_ubuntu_regular</item>
+        <item name="background">@drawable/style_btn_unselected</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_text_black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

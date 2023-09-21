@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    tools:context=".DetailFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/home_indecator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/home_indicator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/home_indecator">
+
+                <TextView
+                    android:id="@+id/tv_create_events"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ff_ubuntu_bold"
+                    android:text="Создание события"
+                    android:textColor="@color/primary_text_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_events">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_car" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/ff_ubuntu_medium"
+                        android:text="С 065 МК 77"
+                        android:textColor="@color/secondary_text_light_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/ff_ubuntu_medium"
+                        android:text="Mercedes-Benz"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_header">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_mileage"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Пробег"
+                    android:textColorHint="@color/primary_text_black"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@id/ll_km"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:paddingTop="12dp"
+                        android:text="00"
+                        android:textColor="@color/secondary_text_light_gray"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/til_mileage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/til_mileage">
+
+                    <TextView
+                        android:layout_width="38dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/style_btn_selected"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:text="km"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="38dp"
+                        android:layout_height="34dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/style_btn_unselected"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:text="mi"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="38dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/style_btn_unselected"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:text="мч"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/shadow_"
+                    app:layout_constraintTop_toBottomOf="@id/ll_km" />
+
+                <TextView
+                    android:id="@+id/tv_select_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/ff_ubuntu_medium"
+                    android:text="Выберите категорию"
+                    android:textColor="@color/primary_text_black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/gl_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:columnCount="3"
+                    app:layout_constraintTop_toBottomOf="@id/tv_select_category">
+
+                    <TextView
+                        android:id="@+id/btn_refill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:background="@drawable/style_btn_selected"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="Заправка"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_gas_station"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/btn_clean"
+                        style="@style/BaseButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/style_btn_unselected"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="Штраф"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_fine"
+                        app:layout_constraintStart_toEndOf="@id/btn_refill"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/style_btn_unselected"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="Химчистка"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_dry_cleaning"
+                        app:layout_constraintStart_toEndOf="@id/btn_clean"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/btn_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/style_btn_unselected"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="Товары"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/ic_goods"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/btn_refill" />
+
+                    <TextView
+                        android:id="@+id/btn_more_ten"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/style_btn_no_stroke"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="+ еще 10"
+                        android:textColor="@color/primary_text_link"
+                        android:textSize="12sp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toEndOf="@id/btn_product"
+                        app:layout_constraintTop_toBottomOf="@id/btn_clean" />
+
+                    <TextView
+                        android:id="@+id/btn_dtp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/style_btn_unselected"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="ДТП"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:drawableStartCompat="@drawable/ic_accident"
+                        app:layout_constraintStart_toEndOf="@id/btn_product"
+                        app:layout_constraintTop_toBottomOf="@id/btn_refill" />
+
+                    <TextView
+                        android:id="@+id/btn_settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/style_btn_unselected"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="Ремот"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:drawableStartCompat="@drawable/ic_repair"
+                        app:layout_constraintStart_toEndOf="@id/btn_dtp"
+                        app:layout_constraintTop_toBottomOf="@id/btn_refill" />
+
+                    <TextView
+                        android:id="@+id/btn_wash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/style_btn_unselected"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="Мойка"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:drawableStartCompat="@drawable/ic_washing"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/btn_product" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/shadow_"
+                    app:layout_constraintTop_toBottomOf="@id/gl_category" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_location"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:hint="Место"
+                    android:textColorHint="@color/primary_text_black"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/view2">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart="@drawable/ic_location"
+                        android:drawablePadding="16dp"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:padding="20dp"
+                        android:paddingTop="12dp"
+                        android:text="Укажите адрес или выберите на карте"
+                        android:textColor="@color/secondary_text_light_gray"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/iv_my_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_my_location"
+                    app:layout_constraintBottom_toBottomOf="@id/til_location"
+                    app:layout_constraintEnd_toEndOf="@id/til_location"
+                    app:layout_constraintTop_toTopOf="@id/til_location" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/const_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="38dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_location">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_quantity"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Количество"
+                        android:textColorHint="@color/primary_text_black"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:layout_constraintEnd_toStartOf="@id/til_price"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/ff_ubuntu_regular"
+                            android:paddingStart="16dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="10dp"
+                            android:text="00"
+                            android:textColor="@color/secondary_text_light_gray"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/ff_ubuntu_medium"
+                        android:text="л"
+                        android:textColor="@color/secondary_text_light_gray"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/til_quantity"
+                        app:layout_constraintEnd_toEndOf="@id/til_quantity"
+                        app:layout_constraintTop_toTopOf="@id/til_quantity" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_price"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:hint="Цена"
+                        android:textColorHint="@color/primary_text_black"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:layout_constraintEnd_toStartOf="@id/til_sum"
+                        app:layout_constraintStart_toEndOf="@id/til_quantity"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/ff_ubuntu_regular"
+                            android:paddingStart="16dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="10dp"
+                            android:text="00"
+                            android:textColor="@color/secondary_text_light_gray"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/ff_ubuntu_medium"
+                        android:text="₽/л"
+                        android:textColor="@color/secondary_text_light_gray"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/til_price"
+                        app:layout_constraintEnd_toEndOf="@id/til_price"
+                        app:layout_constraintTop_toTopOf="@id/til_price" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_sum"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Сумма"
+                        android:textColorHint="@color/primary_text_black"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/til_price"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/ff_ubuntu_regular"
+                            android:paddingStart="16dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="10dp"
+                            android:text="00"
+                            android:textColor="@color/secondary_text_light_gray"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/ff_ubuntu_medium"
+                        android:text="₽"
+                        android:textColor="@color/secondary_text_light_gray"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/til_sum"
+                        app:layout_constraintEnd_toEndOf="@id/til_sum"
+                        app:layout_constraintTop_toTopOf="@id/til_sum" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/img_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/line_"
+                    app:layout_constraintTop_toBottomOf="@id/const_et" />
+
+                <TextView
+                    android:id="@+id/tv_add_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ff_ubuntu_medium"
+                    android:text="Добавить коментарий"
+                    android:textColor="@color/primary_text_black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_line" />
+
+                <ImageView
+                    android:id="@+id/btn_plus"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/add_round"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_line" />
+
+                <ImageView
+                    android:id="@+id/btn_minus"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_btn_minus"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/tv_add_comment">
+
+                    <ImageView
+                        android:id="@+id/img_line_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:src="@drawable/line_"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/tv_oil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/edit_text_background"
+                        android:fontFamily="@font/ff_ubuntu_regular"
+                        android:padding="12dp"
+                        android:text="Течет масло"
+                        android:textColor="@color/primary_text_black"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/const_add_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ff_ubuntu_medium"
+                            android:text="Добавить фото"
+                            android:textColor="@color/primary_text_black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/add_round"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="34dp"
+                        android:background="@drawable/btn_record"
+                        android:fontFamily="@font/ff_ubuntu_medium"
+                        android:gravity="center"
+                        android:paddingVertical="19dp"
+                        android:text="Готово"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
