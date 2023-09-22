@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="BaseButton" parent="Widget.AppCompat.TextView">
-        <item name="android:drawablePadding">10dp</item>
+    <style name="ButtonStyle">
+        <item name="android:layout_width">38dp</item>
         <item name="android:layout_height">34dp</item>
-        <item name="fontFamily">@font/ff_ubuntu_regular</item>
-        <item name="background">@drawable/style_btn_unselected</item>
+        <item name="android:fontFamily">@font/ff_ubuntu_regular</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/primary_text_black</item>
         <item name="android:textSize">12sp</item>
     </style>
+
+    <style name="MyTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">Количество</item>
+        <item name="android:textColorHint">@color/primary_text_black</item>
+    </style>
+
+    <style name="MyEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fontFamily">@font/ff_ubuntu_regular</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:text">00</item>
+        <item name="android:textColor">@color/secondary_text_light_gray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MyTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/ff_ubuntu_medium</item>
+        <item name="android:textColor">@color/primary_text_black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MyButtonStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:background">@drawable/style_btn_selected</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:fontFamily">@font/ff_ubuntu_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_text_black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="MyButtonStyleNoStroke" parent="MyButtonStyle">
+        <item name="android:background">@drawable/style_btn_no_stroke</item>
+    </style>
+
+    <style name="MyButtonStyleLink" parent="MyButtonStyle">
+        <item name="android:textColor">@color/primary_text_link</item>
+    </style>
+
+    <style name="MyButtonStyleHidden" parent="MyButtonStyle">
+        <item name="android:visibility">gone</item>
+    </style>
+
 
 </resources>

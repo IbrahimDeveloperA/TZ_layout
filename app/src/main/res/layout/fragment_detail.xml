@@ -34,11 +34,8 @@
 
                 <TextView
                     android:id="@+id/tv_create_events"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/ff_ubuntu_bold"
+                    style="@style/MyTextView"
                     android:text="Создание события"
-                    android:textColor="@color/primary_text_black"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -122,35 +119,26 @@
                     app:layout_constraintTop_toTopOf="@id/til_mileage">
 
                     <TextView
+                        style="@style/ButtonStyle"
                         android:layout_width="38dp"
                         android:layout_height="34dp"
                         android:background="@drawable/style_btn_selected"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
-                        android:text="km"
-                        android:textColor="@color/primary_text_black"
-                        android:textSize="12sp" />
+                        android:text="km" />
 
                     <TextView
+                        style="@style/ButtonStyle"
                         android:layout_width="38dp"
                         android:layout_height="34dp"
                         android:layout_marginHorizontal="10dp"
                         android:background="@drawable/style_btn_unselected"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
-                        android:text="mi"
-                        android:textColor="@color/primary_text_black"
-                        android:textSize="12sp" />
+                        android:text="mi" />
 
                     <TextView
+                        style="@style/ButtonStyle"
                         android:layout_width="38dp"
                         android:layout_height="34dp"
                         android:background="@drawable/style_btn_unselected"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
-                        android:text="мч"
-                        android:textColor="@color/primary_text_black"
-                        android:textSize="12sp" />
+                        android:text="мч" />
 
                 </LinearLayout>
 
@@ -179,154 +167,101 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:columnCount="3"
                     app:layout_constraintTop_toBottomOf="@id/tv_select_category">
 
                     <TextView
                         android:id="@+id/btn_refill"
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
-                        android:background="@drawable/style_btn_selected"
-                        android:drawablePadding="10dp"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
+                        style="@style/MyButtonStyle"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
                         android:text="Заправка"
-                        android:textColor="@color/primary_text_black"
-                        android:textSize="12sp"
                         app:drawableStartCompat="@drawable/ic_gas_station"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/btn_clean"
-                        style="@style/BaseButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
+                        style="@style/MyButtonStyle"
                         android:layout_marginStart="10dp"
                         android:background="@drawable/style_btn_unselected"
-                        android:drawablePadding="10dp"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
                         android:text="Штраф"
-                        android:textColor="@color/primary_text_black"
-                        android:textSize="12sp"
                         app:drawableStartCompat="@drawable/ic_fine"
                         app:layout_constraintStart_toEndOf="@id/btn_refill"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
+                        android:id="@+id/textView"
+                        style="@style/MyButtonStyle"
                         android:layout_marginStart="10dp"
                         android:background="@drawable/style_btn_unselected"
-                        android:drawablePadding="10dp"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
                         android:text="Химчистка"
-                        android:textColor="@color/primary_text_black"
-                        android:textSize="12sp"
                         app:drawableStartCompat="@drawable/ic_dry_cleaning"
                         app:layout_constraintStart_toEndOf="@id/btn_clean"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/btn_product"
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
+                        style="@style/MyButtonStyle"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/style_btn_unselected"
-                        android:drawablePadding="10dp"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
                         android:text="Товары"
-                        android:textColor="@color/primary_text_black"
-                        android:textSize="12sp"
                         app:drawableStartCompat="@drawable/ic_goods"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/btn_refill" />
 
                     <TextView
-                        android:layout_marginStart="10dp"
                         android:id="@+id/btn_more_ten"
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
+                        style="@style/MyButtonStyleLink"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/style_btn_no_stroke"
-                        android:drawablePadding="10dp"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
+                        android:background="@drawable/style_btn_unselected"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
                         android:text="+ еще 10"
-                        android:textColor="@color/primary_text_link"
-                        android:textSize="12sp"
                         android:visibility="visible"
                         app:layout_constraintStart_toEndOf="@id/btn_product"
                         app:layout_constraintTop_toBottomOf="@id/btn_clean" />
 
                     <TextView
                         android:id="@+id/btn_dtp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
+                        style="@style/MyButtonStyleHidden"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/style_btn_unselected"
-                        android:drawablePadding="10dp"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
                         android:text="ДТП"
-                        android:textColor="@color/primary_text_black"
-                        android:textSize="12sp"
-                        android:visibility="gone"
                         app:drawableStartCompat="@drawable/ic_accident"
                         app:layout_constraintStart_toEndOf="@id/btn_product"
                         app:layout_constraintTop_toBottomOf="@id/btn_refill" />
 
                     <TextView
                         android:id="@+id/btn_settings"
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
+                        style="@style/MyButtonStyleHidden"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/style_btn_unselected"
-                        android:drawablePadding="10dp"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
-                        android:text="Ремот"
-                        android:textColor="@color/primary_text_black"
-                        android:textSize="12sp"
-                        android:visibility="gone"
+                        android:text="Ремонт"
                         app:drawableStartCompat="@drawable/ic_repair"
                         app:layout_constraintStart_toEndOf="@id/btn_dtp"
                         app:layout_constraintTop_toBottomOf="@id/btn_refill" />
 
                     <TextView
                         android:id="@+id/btn_wash"
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
+                        style="@style/MyButtonStyleHidden"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/style_btn_unselected"
-                        android:drawablePadding="10dp"
-                        android:fontFamily="@font/ff_ubuntu_regular"
-                        android:gravity="center"
                         android:paddingHorizontal="10dp"
                         android:paddingVertical="4dp"
                         android:text="Мойка"
-                        android:textColor="@color/primary_text_black"
-                        android:textSize="12sp"
-                        android:visibility="gone"
                         app:drawableStartCompat="@drawable/ic_washing"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/btn_product" />
@@ -387,11 +322,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_quantity"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:hint="Количество"
-                        android:textColorHint="@color/primary_text_black"
+                        style="@style/MyTextInputLayout"
                         app:boxCornerRadiusBottomEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
                         app:boxCornerRadiusTopEnd="12dp"
@@ -400,16 +331,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/ff_ubuntu_regular"
-                            android:paddingStart="16dp"
-                            android:paddingTop="12dp"
-                            android:paddingEnd="10dp"
-                            android:text="00"
-                            android:textColor="@color/secondary_text_light_gray"
-                            android:textSize="14sp" />
+                        <EditText style="@style/MyEditText" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
@@ -426,12 +348,9 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_price"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        style="@style/MyTextInputLayout"
                         android:layout_marginHorizontal="10dp"
                         android:hint="Цена"
-                        android:textColorHint="@color/primary_text_black"
                         app:boxCornerRadiusBottomEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
                         app:boxCornerRadiusTopEnd="12dp"
@@ -440,16 +359,7 @@
                         app:layout_constraintStart_toEndOf="@id/til_quantity"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/ff_ubuntu_regular"
-                            android:paddingStart="16dp"
-                            android:paddingTop="12dp"
-                            android:paddingEnd="10dp"
-                            android:text="00"
-                            android:textColor="@color/secondary_text_light_gray"
-                            android:textSize="14sp" />
+                        <EditText style="@style/MyEditText" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
@@ -466,11 +376,8 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_sum"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        style="@style/MyTextInputLayout"
                         android:hint="Сумма"
-                        android:textColorHint="@color/primary_text_black"
                         app:boxCornerRadiusBottomEnd="12dp"
                         app:boxCornerRadiusBottomStart="12dp"
                         app:boxCornerRadiusTopEnd="12dp"
@@ -479,16 +386,7 @@
                         app:layout_constraintStart_toEndOf="@id/til_price"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/ff_ubuntu_regular"
-                            android:paddingStart="16dp"
-                            android:paddingTop="12dp"
-                            android:paddingEnd="10dp"
-                            android:text="00"
-                            android:textColor="@color/secondary_text_light_gray"
-                            android:textSize="14sp" />
+                        <EditText style="@style/MyEditText" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
@@ -524,11 +422,10 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:drawableRight="@drawable/arrow"
                         android:fontFamily="@font/ff_ubuntu_regular"
                         android:paddingStart="16dp"
                         android:paddingTop="12dp"
-
-                        android:drawableRight="@drawable/arrow"
                         android:paddingEnd="10dp"
                         android:text="Бензин АИ-98"
                         android:textColor="@color/secondary_text_light_gray"
@@ -556,13 +453,13 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:drawableStart="@drawable/calendar"
+                        android:drawableEnd="@drawable/arrow"
                         android:fontFamily="@font/ff_ubuntu_regular"
                         android:paddingStart="16dp"
                         android:paddingTop="12dp"
                         android:paddingEnd="10dp"
                         android:text=" "
-                        android:drawableStart="@drawable/calendar"
-                        android:drawableEnd="@drawable/arrow"
                         android:textColor="@color/secondary_text_light_gray"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -577,12 +474,10 @@
 
                 <TextView
                     android:id="@+id/tv_add_comment"
+                    style="@style/MyTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/ff_ubuntu_medium"
-                    android:text="Добавить коментарий"
-                    android:textColor="@color/primary_text_black"
-                    android:textSize="14sp"
+                    android:text="Добавить комментарий"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/img_line" />
 
@@ -638,12 +533,10 @@
                         android:layout_marginTop="28dp">
 
                         <TextView
+                            style="@style/MyTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/ff_ubuntu_medium"
                             android:text="Добавить фото"
-                            android:textColor="@color/primary_text_black"
-                            android:textSize="14sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
