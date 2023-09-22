@@ -100,95 +100,73 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
+                        app:layout_constraintTop_toTopOf="parent"
                         android:id="@+id/img_line_left"
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
+                        style="@style/StatItem"
                         android:layout_marginStart="24dp"
-                        android:src="@drawable/group"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
-                        android:id="@+id/tv_km_left"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:fontFamily="@font/ff_ubuntu_medium"
+                        android:id="@+id/tv_km_left"
+                        style="@style/StatText"
                         android:text="54 000 km"
-                        android:textColor="@color/black"
-                        android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="@id/img_line_left"
                         app:layout_constraintStart_toStartOf="@id/img_line_left"
                         app:layout_constraintTop_toBottomOf="@id/img_line_left" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/ff_ubuntu_regular"
+                        style="@style/StatText"
                         android:text="Статистика"
-                        android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="@id/tv_km_left"
                         app:layout_constraintStart_toStartOf="@id/tv_km_left"
                         app:layout_constraintTop_toBottomOf="@id/tv_km_left" />
                     <!--                    RIGHT-->
 
+                    <!-- Right -->
                     <ImageView
+                        app:layout_constraintTop_toTopOf="parent"
                         android:id="@+id/img_line_right"
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
+                        style="@style/StatItem"
                         android:layout_marginEnd="24dp"
-                        android:src="@drawable/group"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintEnd_toEndOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_km_right"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/ff_ubuntu_medium"
+                        style="@style/StatText"
                         android:text="54 000 km"
-                        android:textColor="@color/black"
-                        android:textSize="12sp"
+                        android:fontFamily="@font/ff_ubuntu_medium"
                         app:layout_constraintEnd_toEndOf="@id/img_line_right"
                         app:layout_constraintStart_toStartOf="@id/img_line_right"
                         app:layout_constraintTop_toBottomOf="@id/img_line_right" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/ff_ubuntu_regular"
+                        style="@style/StatText"
                         android:text="Статистика"
-                        android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="@id/tv_km_right"
                         app:layout_constraintStart_toStartOf="@id/tv_km_right"
                         app:layout_constraintTop_toBottomOf="@id/tv_km_right" />
 
+                    <!-- Center -->
                     <ImageView
+                        app:layout_constraintTop_toTopOf="parent"
                         android:id="@+id/img_line_center"
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@drawable/group"
+                        style="@style/StatItem"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_km_center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/ff_ubuntu_medium"
+                        style="@style/StatText"
                         android:text="54 000 km"
-                        android:textColor="@color/black"
-                        android:textSize="12sp"
+                        android:fontFamily="@font/ff_ubuntu_medium"
                         app:layout_constraintEnd_toEndOf="@id/img_line_center"
                         app:layout_constraintStart_toStartOf="@id/img_line_center"
                         app:layout_constraintTop_toBottomOf="@id/img_line_center" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/ff_ubuntu_regular"
+                        style="@style/StatText"
                         android:text="Статистика"
-                        android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="@id/tv_km_center"
                         app:layout_constraintStart_toStartOf="@id/tv_km_center"
                         app:layout_constraintTop_toBottomOf="@id/tv_km_center" />
@@ -260,38 +238,24 @@
 
         <TextView
             android:id="@+id/btm_create_event"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/text_primary"
-            android:fontFamily="@font/ff_ubuntu_medium"
-            android:gravity="center"
+            style="@style/PrimaryButton"
             android:paddingHorizontal="16dp"
             android:paddingVertical="11dp"
+            android:layout_marginEnd="8dp"
             android:text="Создать событие"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/btn_record"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/card_" />
 
         <TextView
+            style="@style/PrimaryButton"
             android:id="@+id/btn_record"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="9dp"
             android:background="@drawable/btn_record"
-            android:fontFamily="@font/ff_ubuntu_medium"
-            android:gravity="center"
             android:paddingHorizontal="16dp"
             android:paddingVertical="11dp"
             android:text="Запись на ТО"
             android:textColor="@color/primary_text_black"
-            android:textSize="16sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btm_create_event"
             app:layout_constraintTop_toBottomOf="@id/card_" />
